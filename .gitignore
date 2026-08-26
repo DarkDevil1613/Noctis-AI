@@ -1,0 +1,26 @@
+# Environment & Secrets (NEVER COMMIT .env)
+.env
+*.env
+!.env.example
+
+# Python Runtime & Dependencies
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Databases, Logs & Temporary Files
+logs/
+*.log
+*.db
+*.pid
+noctis_run.pid
+scratch/
+.user_uploaded/
+
+# OS Specific
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,18 @@
+# DevilCore / Noctis Dependencies
+fastapi>=0.100.0
+uvicorn>=0.22.0
+groq>=0.4.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+sounddevice>=0.4.6
+onnxruntime>=1.15.0
+colorama>=0.4.6
+psutil>=5.9.0
+requests>=2.31.0
+pycaw>=20230407
+screen-brightness-control>=0.23.0
+pygetwindow>=0.0.9
+pyautogui>=0.9.54
+edge-tts>=6.1.9
+soundfile>=0.12.1
+pydantic>=2.0.0

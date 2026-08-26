@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Noctis — N-0CT15</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ui/style.css?v=10.1">
+</head>
+<body>
+    <div class="hud-grid-background"></div>
+    <div class="hud-screen-overlay"></div>
+    <canvas id="constellationCanvas"></canvas>
+    
+    <div class="title-bar">
+        <div class="title-text">N-0CT15</div>
+        <div class="window-controls">
+            <button class="win-btn minimize-btn" id="minimizeBtn">
+                <svg width="12" height="12" viewBox="0 0 12 12"><rect x="1" y="5" width="10" height="2" fill="currentColor"/></svg>
+            </button>
+            <button class="win-btn close-btn" id="closeBtn">
+                <svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1l10 10m0-10L1 11" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="center-panel">
+            <div class="visualizer-wrapper">
+                <div class="gyro-container">
+                    <div class="gyro-ring ring-1"></div>
+                    <div class="gyro-ring ring-2"></div>
+                    <div class="gyro-ring ring-3"></div>
+                    <div class="gyro-core"></div>
+                </div>
+                <canvas id="jarvisVisualizer" width="300" height="300"></canvas>
+            </div>
+            <div class="status-display">
+                <div class="status-badge standby" id="statusBadge">STANDBY</div>
+                <div class="voice-label" id="voiceLabel">Voice: Idle</div>
+            </div>
+            <div class="system-stats-panel jarvis-panel">
+                <div class="stat-item">
+                    <div class="stat-value" id="cpuStat">0%</div>
+                    <div class="stat-label">CPU</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="ramStat">0GB</div>
+                    <div class="stat-label">RAM</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="batteryStat">100%</div>
+                    <div class="stat-label">PWR</div>
+                </div>
+            </div>
+        </div>
+        <div class="terminal-section">
+            <div class="hud-bar jarvis-panel">
+                <div class="hud-title">NOCTIS</div>
+                <div class="uptime-clock" id="uptimeClock">00:00:00</div>
+            </div>
+            <div class="terminal-panel jarvis-panel" id="terminal">
+                <div class="msg msg-system">═══ NOCTIS v10.0 — Shadow Monarch Protocol ═══</div>
+                <div class="msg msg-system">Neural Omniscient Cognitive Tactical Intelligence System</div>
+                <div class="msg msg-system">Systems online. Awaiting command, Master.</div>
+            </div>
+            <div class="quick-actions">
+                <button class="quick-btn" data-cmd="system stats">📊 Stats</button>
+                <button class="quick-btn" data-cmd="open downloads">📁 Downloads</button>
+                <button class="quick-btn" data-cmd="open youtube">🌐 YouTube</button>
+                <button class="quick-btn" data-cmd="set volume 50">🔊 Vol 50%</button>
+            </div>
+            <div class="input-bar jarvis-panel">
+                <input type="text" id="commandInput" placeholder="Enter command..." autocomplete="off">
+                <button class="send-btn" id="sendBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/ui/app.js?v=10.1"></script>
+</body>
+</html>
